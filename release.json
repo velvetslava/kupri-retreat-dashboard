@@ -3,8 +3,10 @@
   "status": "partial-source-coverage",
   "appId": "dashboard:7e1db891-2d36-4ba0-9aea-e8ba3f46acb5",
   "files": {
-    "index.html": "abadf1366908fb0adec089ffaff4463b069508449a63de0fa7c8395c3f9493b7",
-    "data-app-build.json": "1d8bc028b63b872ac3d9891267a89d274945f73191b58eb4b369209bf47705a6",
+    "index.html": "0f4cdd30084a6ef39d57957f6840c1ca1568b55e912d32bf3896ad6d61a6b741",
+    "data-app-build.json": "b6b808472e3e5feb094553bd60a1296a8830b53d8c1bf8b4c82b225b46a487ad",
+    "README.md": "277b56f95af1362718eda6a3813437d6fea96120ffbbc1d54f7ff5f976b4983c",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "snapshot.1fc39c6e60e624ee27ae1e12d0700cdd41a6d55255cebccf953681ac0e9bbc9f.json": "1fc39c6e60e624ee27ae1e12d0700cdd41a6d55255cebccf953681ac0e9bbc9f",
     "cards/moscow-2026-12-01.png": "20f7f825f86beeac66f6b846a5ee26613554aa3dffee2d23b404e15bb0f0489a",
     "cards/lisbon-2026-11-04.png": "cddf8edaccf463c7f35a84d996308f1ce4dd0b9a2ff601e8895b04028679cd04",

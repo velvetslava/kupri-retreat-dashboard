@@ -55,7 +55,7 @@ const __dataAuthoredModule = {exports:Object.create(null)};
 'use strict';
 
 var jsxRuntime = require('react/jsx-runtime');
-require('react');
+var react = require('react');
 var recharts = require('recharts');
 var dataApp = require('@openai/data-app');
 
@@ -94,6 +94,11 @@ function Summary({events,s}){return jsxRuntime.jsxs('div', { className: "retreat
  , jsxRuntime.jsx('p', { className: "summary-caution", children: "* 6 ноябрьских анкет лиссабона не распределены по датам. прямые заявки английского ретрита не подключены; его нули — только общая форма и fin. суммы — записи «контакт × ретрит», не уникальные люди за сезон. «—» — вместимость не подтверждена. paid включает переносы, частичные оплаты и нулевые строки."                                              }), jsxRuntime.jsx(Footer, { s: s,})]})}
 function DashboardContent(){
  const {queries:q}=dataApp.useDataApp(),events=q.retreats.rows,s=q.summary.rows[0];
+ react.useEffect(()=>{
+  const go=()=>{const id=window.location.hash.slice(1);if(id==='summary'||events.some(e=>e.id===id))document.getElementById(id)?.scrollIntoView({block:'start'});};
+  const frame=requestAnimationFrame(go);window.addEventListener('hashchange',go);
+  return ()=>{cancelAnimationFrame(frame);window.removeEventListener('hashchange',go);};
+ },[events]);
  return jsxRuntime.jsxs('article', { className: "retreat-page", children: [jsxRuntime.jsxs('nav', { className: "retreat-nav", 'aria-label': "ретриты", children: [jsxRuntime.jsx('a', { href: "#summary", children: "общий статус" }), events.map(e=>jsxRuntime.jsxs('a', { href: `#${e.id}`, children: [e.label, " · "  , e.dates.replace(' 2026','')]}, e.id))]})
  , jsxRuntime.jsxs('section', { id: "summary", className: "retreat-slot", children: [jsxRuntime.jsx(dataApp.DataComponent, { id: "retreat-summary", queryId: "retreats", queryIds: ['retreats','summary'], showHeading: false, kind: "custom", title: "общий статус · 6 ретритов"    , sourceRows: events, displayRows: events, sourceRowsByQuery: {retreats:events,summary:[s]}, className: "retreat-card", children: jsxRuntime.jsx(Summary, { events: events, s: s,})}), jsxRuntime.jsx('a', { className: "png-link", href: "./cards/summary.png", download: true, children: "скачать общую карточку"  })]})
  , jsxRuntime.jsx('div', { className: "retreat-deck", children: events.map(e=>{const rows=q.curves.rows.filter(r=>r.event_id===e.id);return jsxRuntime.jsxs('section', { id: e.id, className: "retreat-slot", children: [jsxRuntime.jsx(dataApp.DataComponent, { id: `snapshot-${e.id}`, queryId: "retreats", queryIds: ['retreats','curves','summary'], showHeading: false, kind: "custom", title: `${e.label} · ${e.dates}`, sourceRows: [e], displayRows: [e], sourceRowsByQuery: {retreats:[e],curves:rows,summary:[s]}, className: "retreat-card", children: jsxRuntime.jsx(Snapshot, { e: e, rows: rows, s: s,})}), jsxRuntime.jsxs('div', { className: "card-links", children: [jsxRuntime.jsx('a', { href: `#${e.id}`, children: "ссылка на ретрит"  }), jsxRuntime.jsx('a', { href: `./cards/${e.id}.png`, download: true, children: "скачать PNG" }), jsxRuntime.jsx('a', { href: "#summary", children: "к общему статусу"  })]})]}, e.id)})})]})
