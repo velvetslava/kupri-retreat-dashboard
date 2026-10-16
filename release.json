@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-10-16T16:40:46.814000+00:00",
+  "status": "partial-source-coverage",
+  "appId": "dashboard:7e1db891-2d36-4ba0-9aea-e8ba3f46acb5",
+  "files": {
+    "index.html": "abadf1366908fb0adec089ffaff4463b069508449a63de0fa7c8395c3f9493b7",
+    "data-app-build.json": "1d8bc028b63b872ac3d9891267a89d274945f73191b58eb4b369209bf47705a6",
+    "snapshot.1fc39c6e60e624ee27ae1e12d0700cdd41a6d55255cebccf953681ac0e9bbc9f.json": "1fc39c6e60e624ee27ae1e12d0700cdd41a6d55255cebccf953681ac0e9bbc9f",
+    "cards/moscow-2026-12-01.png": "20f7f825f86beeac66f6b846a5ee26613554aa3dffee2d23b404e15bb0f0489a",
+    "cards/lisbon-2026-11-04.png": "cddf8edaccf463c7f35a84d996308f1ce4dd0b9a2ff601e8895b04028679cd04",
+    "cards/moscow-2026-12-05.png": "2a529aed1f39fe1820dd074350ea4ecd3e6a33dd2077b8edd354a95254eed894",
+    "cards/tbilisi-2026-11-17.png": "f1672a99047ff25bc9551618390f7c29952e47c467717ad0097c04838136ef02",
+    "cards/tbilisi-2026-11-21.png": "c46c29ff7c64ad388a34f3be2c95330038cf5b258f2122357b53af652efdb4ee",
+    "cards/lisbon-2026-11-08.png": "e7526992f0f843ddde853db86e5a3f1eaf53bc7dc5e2a2a01e9cc84d208eda30",
+    "cards/summary.png": "38b5f8ec7d7bf1f96313932d755d116408f1579124fcb2a1d9465f86b2d86628"
+  }
+}
